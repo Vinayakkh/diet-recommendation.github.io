@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Diet Recommendations</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f9f9f9;
+		}
+		h1 {
+			color: #333;
+			text-align: center;
+			margin-top: 50px;
+		}
+		h2 {
+			color: #333;
+			margin-top: 30px;
+		}
+		
+	</style>
+</head>
+<body>
+	<h1>Diet Recommendations</h1>
+	{% if recommended_foods %}
+		<h2>Recommended Foods:</h2>
+		
+		<ul class="typewriter">
+			{% for food in recommended_foods %}
+				<li>{{ food }}</li>
+			{% endfor %}
+		</ul>
+	{% else %}
+		<p>No recommendations found.</p>
+	{% endif %}
+	<a href="index.html">Go Back</a>
+</body>
+</html>
+ 
